@@ -242,6 +242,10 @@ section {
         scroll-snap-type: none;
     }
 
+    #servicios{
+         height: auto;
+    }
+
 
     h1 {
         font-size: 1.8rem !important;
