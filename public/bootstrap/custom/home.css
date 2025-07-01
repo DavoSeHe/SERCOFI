@@ -242,9 +242,6 @@ section {
         scroll-snap-type: none;
     }
 
-    section {
-        height: auto;
-    }
 
     h1 {
         font-size: 1.8rem !important;
