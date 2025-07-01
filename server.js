@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
-const puerto = 3000;
+
+// Usa el puerto que Render provee o 3000 en local
+const puerto = process.env.PORT || 3000;
 
 app.use(express.static('public'));
 
