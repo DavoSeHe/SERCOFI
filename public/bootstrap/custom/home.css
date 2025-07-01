@@ -242,7 +242,7 @@ section {
         scroll-snap-type: none;
     }
 
-    #servicios{
+    #servicios, #nosotros{
          height: auto;
     }
 
