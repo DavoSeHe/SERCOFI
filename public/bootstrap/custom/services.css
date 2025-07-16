@@ -1,5 +1,5 @@
 section {
-    height: 93vh;
+    height: auto;
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
