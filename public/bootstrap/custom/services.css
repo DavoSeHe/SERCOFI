@@ -1,5 +1,6 @@
 section {
-    height: 92vh;
+    height: 93vh;
+    width: 100%;
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
@@ -49,6 +50,60 @@ section {
         width: 22rem;
 
     }
+    section{
+        height: auto;
+        width: 100vw;
+    }
+}
+
+@media (max-width: 992px) {
+  .banner img {
+    width: 18rem;
+    top: 5px;
+    right: 0;
+  }
+
+  .icon-container {
+    font-size: 3rem;
+  }
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 576px) {
+  .banner img {
+    width: 14rem;
+  }
+
+  .banner p {
+    font-size: 1rem;
+  }
+
+  .icon-container {
+    font-size: 2.5rem;
+  }
+
+  .service-card h5 {
+    font-size: 1.1rem;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}
+
+/* Para pantallas extra grandes */
+@media (min-width: 1400px) {
+  .banner img {
+    width: 42rem;
+  }
+
+  .icon-container {
+    font-size: 5.5rem;
+  }
 }
 
 .back-services {
