@@ -1,7 +1,7 @@
 {
   "name": "miwebnode",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "bootstrap": "^5.3.5",
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "jquery": "^3.7.1"
   },
