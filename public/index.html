@@ -111,7 +111,7 @@
             document.getElementById("contenido-dinamico").innerHTML = html;
           })
           .catch((error) => console.log("Error al cargar el módulo:", error));
-
+console.log(archivo);
         if (archivo.includes("blog.html")) {
           loadBlogPosts();
         }
