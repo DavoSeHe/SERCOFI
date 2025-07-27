@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "title": "Mi Primera Entrada de Blog",
+    "date": "2025-07-27",
+    "author": "Desarrollador Node",
+    "imageUrl": "https://via.placeholder.com/600x400?text=Post+1",
+    "content": "Este es el contenido de mi primera entrada de blog. Aquí puedo escribir sobre cualquier tema que me interese. Es un buen lugar para empezar a compartir mis ideas y conocimientos."
+  },
+  {
+    "id": "2",
+    "title": "Consejos para Optimizar Node.js",
+    "date": "2025-07-26",
+    "author": "Dev Expert",
+    "imageUrl": "https://via.placeholder.com/600x400?text=Post+2",
+    "content": "La optimización en Node.js es crucial para el rendimiento de las aplicaciones. Algunas prácticas incluyen el uso eficiente de asincronía, el manejo de errores y la gestión de la memoria. ¡Explora más!"
+  },
+  {
+    "id": "3",
+    "title": "Introducción a Bootstrap 5.3",
+    "date": "2025-07-25",
+    "author": "Diseñador Web",
+    "imageUrl": "https://via.placeholder.com/600x400?text=Post+3",
+    "content": "Bootstrap 5.3 trae consigo nuevas características y mejoras en la experiencia de desarrollo front-end. Aprender a usar su sistema de grillas y componentes te ahorrará mucho tiempo."
+  }
+]
