@@ -7,7 +7,6 @@ body {
 
 section {
     height: 100vh;
-    
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
@@ -277,53 +276,5 @@ section {
     .icon-large {
         width: 28px;
         height: 28px;
-    }
-}
-
-
-@media (max-width: 576px) {
-    h1 {
-        font-size: 1.5rem !important;
-    }
-
-    .lead {
-        font-size: 0.95rem;
-    }
-
-    .form-control {
-        font-size: 0.8rem;
-    }
-
-    .cardServices {
-        aspect-ratio: auto;
-        height: auto;
-    }
-
-    .cardServices-front h5 {
-        font-size: 1rem !important;
-    }
-
-    .btn {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
-    }
-
-    .icon-large {
-        width: 24px;
-        height: 24px;
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    .lead {
-        font-size: 1.1rem;
-    }
-
-    .cardServices {
-        height: 90%;
     }
 }
