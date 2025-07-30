@@ -1,36 +1,21 @@
+<script>
+  console.log("Se abrio la pagina");
+  // Cargar las entradas del blog al cargar blog.html
+</script>
 <div class="container py-5">
   <h1 class="text-center mb-5 display-4 fw-bold text-primary">Nuestro Blog</h1>
 
-  <div
-    id="blogPostsContainer"
-    class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
-  ></div>
+  <div id="blogPostsContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
 
-  <div
-    class="modal fade"
-    id="blogPostModal"
-    tabindex="-1"
-    aria-labelledby="blogPostModalLabel"
-    aria-hidden="true"
-  >
+  <div class="modal fade" id="blogPostModal" tabindex="-1" aria-labelledby="blogPostModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="blogPostModalLabel"></h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <img
-            id="modalPostImage"
-            src=""
-            class="img-fluid mb-3"
-            alt="Imagen del Post"
-          />
+          <img id="modalPostImage" src="" class="img-fluid mb-3" alt="Imagen del Post" />
           <p class="text-muted small mb-2">
             <span id="modalPostAuthor"></span> |
             <span id="modalPostDate"></span>
@@ -38,11 +23,7 @@
           <div id="modalPostContent"></div>
         </div>
         <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
             Cerrar
           </button>
         </div>
@@ -50,7 +31,3 @@
     </div>
   </div>
 </div>
-<script>
-  console.log("Se abrio la pagina");
-  // Cargar las entradas del blog al cargar blog.html
-</script>
