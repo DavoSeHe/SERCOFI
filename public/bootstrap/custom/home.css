@@ -5,15 +5,6 @@ body {
     padding-top: 70px;
 }
 
-section {
-    height: 100vh;
-    scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-}
-
 #home {
     background-image: url("../../img/Puzzle2.png");
     background-size: cover;
@@ -72,7 +63,6 @@ section {
     background-repeat: no-repeat;
 }
 
-
 #asesorate h1 {
     font-weight: bolder;
 }
@@ -95,12 +85,9 @@ section {
 
 .cardServices {
     perspective: 1000px;
-
-    /* width: calc(100vh - 64vh);
-    height: calc(100vh - 65vh); */
     width: 100%;
     max-width: 300px;
-    height: 80%;
+    height: 20rem;
     aspect-ratio: 4 / 3;
 
     border-radius: 20px;
@@ -236,6 +223,11 @@ section {
 }
 
 
+@media (max-width: 360px) {}
+
+@media (max-width: 414px) {}
+
+@media (max-width: 480px) {}
 
 @media (max-width: 768px) {
     body {
@@ -278,3 +270,9 @@ section {
         height: 28px;
     }
 }
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 1366px) {}
+
+@media (min-width: 1440px) {}

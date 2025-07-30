@@ -1,48 +1,54 @@
 .blog-card {
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
-    display: flex;
-    flex-direction: column;
-  }
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  height: 100%;
+  /* Asegura que todas las tarjetas tengan la misma altura */
+  display: flex;
+  flex-direction: column;
+}
 
-  .blog-card:hover {
-    transform: translateY(-5px);
-  }
+.blog-card:hover {
+  transform: translateY(-5px);
+}
 
-  .blog-card-img-top {
-    height: 200px; /* Altura fija para las imágenes */
-    object-fit: cover; /* Recorta la imagen para que quepa */
-    width: 100%;
-  }
+.blog-card-img-top {
+  height: 200px;
+  /* Altura fija para las imágenes */
+  object-fit: cover;
+  /* Recorta la imagen para que quepa */
+  width: 100%;
+}
 
-  .blog-card-body {
-    flex-grow: 1; /* Permite que el cuerpo ocupe el espacio restante */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Empuja el botón al final */
-  }
+.blog-card-body {
+  flex-grow: 1;
+  /* Permite que el cuerpo ocupe el espacio restante */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Empuja el botón al final */
+}
 
-  .blog-card-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-  }
+.blog-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
 
-  .blog-card-text {
-    font-size: 0.95rem;
-    color: #666;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* Limita el texto a 3 líneas */
-    -webkit-box-orient: vertical;
-  }
+.blog-card-text {
+  font-size: 0.95rem;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* Limita el texto a 3 líneas */
+  -webkit-box-orient: vertical;
+}
 
-  .blog-meta {
-    font-size: 0.85rem;
-    color: #888;
-    margin-bottom: 10px;
-  }
+.blog-meta {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 10px;
+}
