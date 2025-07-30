@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+.section-full {
+    height: calc(100vh - 10vh) !important;
+    border-radius: 0 0 60px 60px;
+    text-align: -webkit-center;
+}
+
+.bg-sercofi {
+    background-color: #E4007C;
+}
+
+.bg-lightGray {
+    background-color: #f9f9f9;
+}
+
+.font-Merienda {
+    font-family: 'Segoe Script', cursive;
+    font-size: 2rem;
+    ;
+}
+
+.font-Oswald {
+    font-family: 'Oswald-var', sans-serif;
+}
+
+.fnt-title {
+    font-size: 3rem;
+}
+
+.fnt-text {
+    font-size: 1.5rem;
+}
+
+.text-Sercofi {
+    color: #E4007C;
+}
+
+main {
+    position: absolute;
+    top: 10vh !important;
+    width: 100%;
+}
+
+.Section1 {
+    background-image: url('../../img/Fondo_seccion1.png');
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.fa-down {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.cta-arrow {
+    font-size: 3rem;
+    color: #e91e63;
+    animation: bounce 2s infinite;
+    margin-top: 20px;
+}
+
+.features-section h2 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 50px;
+}
+
+h2 {
+    color: #333;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 50px;
+}
+
+.features-section ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 75%;
+    margin: 60px 0 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+.features-section ul li:first-child {
+    background-color: #b1d5ff;
+}
+
+.features-section ul li:nth-child(2) {
+    background-color: #bdf2de;
+}
+
+.features-section ul li:nth-child(3) {
+    background-color: #ffe7b4;
+}
+
+.features-section ul li:nth-child(4) {
+    background-color: #ffcacb;
+}
+
+.features-section ul li {
+    padding: 5px;
+    margin: 10px;
+    height: 280px;
+    width: 20%;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    border-radius: 14px;
+    position: relative;
+}
+
+.features-section ul li:hover {
+    width: 40%;
+    height: 95%;
+}
+
+.features-section ul li:hover .desc p {
+    display: block;
+    opacity: 100;
+}
+
+.feature-title {
+    font-size: 21px;
+    padding: 16px 0;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.features-section.animate ul li .desc {
+    display: block;
+    opacity: 1;
+}
+
+.features-section ul li .desc {
+    display: none;
+    opacity: 0;
+    -webkit-animation: fadeIn 2.5s ease;
+    animation: fadeIn 2.5s ease;
+}
+
+.features-section ul li .desc {
+    width: 90%;
+    text-align: left;
+}
+
+.features-section ul li .desc p {
+    color: #000;
+    font-size: 17px;
+    line-height: 20px;
+
+    display: none;
+    opacity: 0;
+    -webkit-animation: fadeIn 2.5s ease;
+    animation: fadeIn 2.5s ease;
+}
+
+p {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.feature-illustration {
+    position: absolute;
+    width: 200px;
+    right: 15px;
+    bottom: -2px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.subrayado_azul {
+    background-image: url(../../img/blue_highlight_03.svg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    white-space: nowrap;
+}
+
+.Marcador_red {
+    background-image: url(../../img/orange_highlight_03.svg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    white-space: nowrap;
+}
+
+
+@font-face {
+    font-family: 'Merienda-var';
+    /* nombre que tú le das */
+    /* src: url('../../fonts/Merienda-VariableFont_wght.ttf') format('truetype'); */
+    src: url('../../fonts/Caveat-VariableFont_wght.ttf') format('truetype');
+    /* src: url('../../fonts/IndieFlower-Regular.ttf') format('truetype'); */
+    /* src: url('../../fonts/PermanentMarker-Regular.ttf') format('truetype'); */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald-var';
+    /* nombre que tú le das */
+    src: url('../../fonts/Oswald-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@media (max-width: 360px) {}
+
+@media (max-width: 414px) {}
+
+@media (max-width: 480px) {}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 1366px) {}
+
+@media (min-width: 1440px) {}
+
+/* @media (min-width: 1920px){} */

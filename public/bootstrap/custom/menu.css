@@ -1,0 +1,43 @@
+.my-navbar {
+  padding: 30px 10px;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  /* Puedes personalizar el color */
+}
+
+.my-navbar.shrink {
+  padding: 15px 10px;
+  background-color: #f8f9fa;
+  /* Puedes cambiar el color si quieres */
+}
+
+.nav-item {
+  margin-left: 20px
+}
+
+.nav-link:hover {
+  color: #E4007C;
+}
+
+.logo {
+  width: calc(100% - 78%);
+}
+
+#modalContent .col-md-4 {
+  display: none;
+}
+
+
+
+@media (max-width: 991px) {
+  .navbar-brand {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+
+  .logo {
+    width: calc(100% - 60%);
+  }
+
+
+}

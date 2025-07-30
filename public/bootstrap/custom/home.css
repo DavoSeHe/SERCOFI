@@ -1,0 +1,278 @@
+body {
+    font-family: "Rubik", sans-serif;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    padding-top: 70px;
+}
+
+#home {
+    background-image: url("../../img/Puzzle2.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.bg-mexican-pink {
+    background-color: #e4007c;
+}
+
+.text-mexican-pink {
+    color: #e4007c;
+}
+
+.fade-in:hover {
+    background-color: white;
+    color: #e4007c !important;
+    box-shadow: 2px 2px 5px #bbb2b2;
+    border: 1px solid #e4007c;
+}
+
+.fade-in-white:hover {
+    background-color: #e4007c !important;
+    color: white !important;
+    box-shadow: 2px 2px 5px #bbb2b2;
+    border: 1px solid white;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#servicios {
+    /* border-radius: 180px 0 180px 0; */
+    background-image: url("../../img/Contable1.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#nosotros {
+    background-image: url("../../img/Nosotros.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+
+#asesorate {
+    background-image: url("../../img/Asesorate.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#asesorate h1 {
+    font-weight: bolder;
+}
+
+.asneg {
+    background-image: url("../../img/Asesoria_negocios.png");
+}
+
+.caphum {
+    background-image: url("../../img/Capital_humano.png");
+}
+
+.impuesto {
+    background-image: url("../../img/Impuestos.png");
+}
+
+.ctrlInter {
+    background-image: url("../../img/Control_interno.png");
+}
+
+.cardServices {
+    perspective: 1000px;
+    width: 100%;
+    max-width: 300px;
+    height: 20rem;
+    aspect-ratio: 4 / 3;
+
+    border-radius: 20px;
+    color: black;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.cardServices-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.cardServices:hover .cardServices-inner {
+    transform: rotateY(180deg);
+}
+
+.cardServices-front,
+.cardServices-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cardServices-front {
+    background-color: #fff;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cardServices-front h5 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bolder;
+    color: white;
+}
+
+.cardServices-front img {
+    width: 100%;
+    height: auto;
+}
+
+.cardServices-back {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: justify;
+}
+
+.card {
+    border: 0;
+    background-color: transparent;
+}
+
+.card-inner img {
+    width: 100%;
+    height: 100%;
+    border-radius: 200px;
+}
+
+.card-foot h5 {
+    font-size: 1.7rem;
+    font-weight: bolder;
+    padding: 0px;
+    margin: 0px;
+}
+
+.card-foot p {
+    font-weight: bolder;
+    padding: 0px;
+    margin: 0px;
+}
+
+.form-control {
+    border: 1px solid #393436;
+    background-color: #1b1f2373;
+}
+
+.form-control::placeholder {
+    color: white;
+
+}
+
+.Phone-icon,
+.facebook-icon,
+.whatsapp-icon,
+.instagram-icon,
+.linkedln-icon {
+    color: white;
+}
+
+.icon-large {
+    width: 40px;
+    height: 40px;
+}
+
+.icon-large:hover {
+    Color: #e4007c;
+
+}
+
+
+.modal-content div {
+    width: 100%;
+    height: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
+@media (max-width: 360px) {}
+
+@media (max-width: 414px) {}
+
+@media (max-width: 480px) {}
+
+@media (max-width: 768px) {
+    body {
+        scroll-snap-type: none;
+    }
+
+    #servicios,
+    #nosotros {
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1.8rem !important;
+    }
+
+    .cardServices-front h5 {
+        font-size: 1.2rem !important;
+    }
+
+    .card-foot h5,
+    .card-foot p {
+        font-size: 1rem !important;
+        text-align: center;
+    }
+
+    .card-inner img {
+        height: auto !important;
+    }
+
+    .btn {
+        width: 100% !important;
+    }
+
+    #asesorate .form-control {
+        font-size: 0.9rem;
+    }
+
+    .icon-large {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 1366px) {}
+
+@media (min-width: 1440px) {}
