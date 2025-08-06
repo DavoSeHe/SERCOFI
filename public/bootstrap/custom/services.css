@@ -81,7 +81,7 @@
 }
 
 .img-fluid {
-    max-width: 110%;
+    max-width: 100%;
 }
 
 @media (max-width: 360px) {}
