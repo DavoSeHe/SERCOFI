@@ -5,12 +5,13 @@
 .banner {
 
     background-color: #000000d4;
-    height: 100%;
+    height: 100vh;
+    width: 100%;
     justify-items: center;
     text-align: inherit;
 }
 
-.banner img {
+.banner div img {
     width: 38rem;
     position: relative;
     right: -50px;
@@ -71,10 +72,18 @@
 }
 
 .dvServices-text {
+    margin-top: 2rem !important;
     color: green;
+    font-size: 1.5rem;
 }
 
+.justify-items-center {
+    justify-items: center;
+}
 
+.img-fluid {
+    max-width: 115%;
+}
 
 @media (max-width: 360px) {}
 
