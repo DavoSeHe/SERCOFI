@@ -174,7 +174,7 @@ body {
 }
 
 .card-foot h5 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bolder;
     padding: 0px;
     margin: 0px;
@@ -221,6 +221,9 @@ body {
     margin: 0 !important;
 }
 
+.mr-5 {
+    margin-right: .5rem;
+}
 
 @media (max-width: 360px) {}
 
@@ -267,6 +270,24 @@ body {
     .icon-large {
         width: 28px;
         height: 28px;
+    }
+}
+
+@media(max-width: 1330px) {
+    .card-foot h5 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 988px) {
+    #servicios .row {
+        width: 75%;
+    }
+}
+
+@media (min-width: 1328px) {
+    #servicios .row {
+        width: 100%;
     }
 }
 

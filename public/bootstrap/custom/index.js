@@ -1,5 +1,4 @@
 
-
 function cargarModulo(archivo) {
     fetch(archivo)
         .then((res) => res.text())
@@ -44,7 +43,7 @@ function cargaCard(idCard) {
     $("#modalCustom").modal("show");
 }
 
-cargarModulo("modules/home.html");
+cargarModulo("modules/services.html");
 
 
 //INICIO SERVICIOS
