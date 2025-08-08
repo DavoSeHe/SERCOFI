@@ -143,6 +143,9 @@
     .img-fluid-center {
         text-align: center;
     }
+.dvServices-text {
+        font-size: 1.6rem;
+    }
 
 
 }
@@ -183,4 +186,5 @@
         font-size: 5.5rem;
     }
 }
+
 
