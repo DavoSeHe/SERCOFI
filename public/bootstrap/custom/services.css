@@ -140,6 +140,10 @@
         display: none;
     }
 
+    .img-fluid-center {
+        text-align: center;
+    }
+
 
 }
 
