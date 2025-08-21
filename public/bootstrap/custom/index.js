@@ -7,9 +7,11 @@ function cargarModulo(archivo) {
         })
         .catch((error) => console.log("Error al cargar el módulo:", error));
 
-    console.log("Se esta cargando", archivo)
+    // console.log("Se esta cargando", archivo)
+    $("body")[0].classList.remove("bg-dark")
     if (archivo.includes("blog.html")) {
 
+        $("body")[0].classList.add("bg-dark")
         loadBlogPosts();
     }
 }
@@ -43,7 +45,7 @@ function cargaCard(idCard) {
     $("#modalCustom").modal("show");
 }
 
-cargarModulo("modules/services.html");
+cargarModulo("modules/home.html");
 
 
 //INICIO SERVICIOS
@@ -79,11 +81,10 @@ if (window.location.hostname === 'localhost' || window.location.hostname === '12
 }
 
 const blogApiUrl = `${blogApiBaseUrl}/api/blog-posts`;
-console.log("URL de la API del Blog utilizada:", blogApiUrl); // Para depuración
+//console.log("URL de la API del Blog utilizada:", blogApiUrl); // Para depuración
 
 // Función para cargar las entradas del blog
 function loadBlogPosts() {
-    console.log("entro")
     $.ajax({
         url: blogApiUrl,
         method: "GET",
@@ -95,7 +96,7 @@ function loadBlogPosts() {
             if (data && data.length > 0) {
                 data.forEach(function (post) {
                     const postHtml = `
-                                <div class="col">
+                                <div class="col col-card ">
                                     <div class="card blog-card h-100" data-post-id="${post.id}">
                                         <img src="${post.imageUrl}" class="card-img-top blog-card-img-top" alt="${post.title}">
                                         <div class="card-body blog-card-body">
@@ -104,7 +105,7 @@ function loadBlogPosts() {
                                                 <p class="blog-meta">Por ${post.author} el ${post.date}</p>
                                                 <p class="card-text blog-card-text">${post.content}</p>
                                             </div>
-                                            <button class="btn btn-primary mt-3 read-more-btn" data-bs-toggle="modal" data-bs-target="#blogPostModal" data-post-id="${post.id}">
+                                            <button class="btn bg-mexican-pink mt-3 read-more-btn" data-post-id="${post.id}" onclick="fn_AbreModal(${post.id})">
                                                 Leer más
                                             </button>
                                         </div>
@@ -112,6 +113,7 @@ function loadBlogPosts() {
                                 </div>
                             `;
                     $container.append(postHtml);
+
                 });
             } else {
                 $container.html(
@@ -132,10 +134,54 @@ function loadBlogPosts() {
     });
 }
 
+var publica;
+function fn_AbreModal(btn) {
+    
 
+    $.ajax({
+        url: `${blogApiUrl}`,
+        method: "GET",
+        dataType: "json",
+        success: function (data) {
+
+            publica = data;
+            const post = data.find(item => item.id == btn);
+
+            if (post) {
+                $("#blogPostModalLabel").text(post.title);
+                $("#modalPostImage").attr("src", post.imageUrl);
+                $("#modalPostAuthor").text(`Por ${post.author}`);
+                $("#modalPostDate").text(`Publicado: ${post.date}`);
+                $("#modalPostContent").html(`<p>${post.content}</p>`); // Usamos .html() pa1ra permitir HTML si el contenido lo tuviera
+
+                $("#modalPostLink")[0].style.display = "block"
+                post.linkUrl != "" ? $("#modalPostLink").attr("href", `${post.linkUrl}`): $("#modalPostLink")[0].style.display = "none";
+            } else {
+                $("#blogPostModalLabel").text("Error");
+                $("#modalPostContent").html(
+                    "<p>No se pudo cargar el contenido de la entrada.</p>"
+                );
+            }
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            // console.error(
+            //     "Error al cargar la entrada específica:",
+            //     textStatus,
+            //     errorThrown
+            // );
+            $("#blogPostModalLabel").text("Error de Carga");
+            $("#modalPostContent").html(
+                "<p>Hubo un problema al cargar esta entrada del blog. Por favor, inténtalo de nuevo.</p>"
+            );
+        },
+    });
+
+    $("#blogPostModal").modal('show');
+}
 
 // Manejar el evento de mostrar el modal (para cargar contenido completo)
 $("#blogPostModal").on("show.bs.modal", function (event) {
+    console.log("o nel")
     const button = $(event.relatedTarget); // Botón que activó el modal
     const postId = button.data("post-id"); // Extraer el ID del post
 
@@ -148,7 +194,7 @@ $("#blogPostModal").on("show.bs.modal", function (event) {
                 $("#blogPostModalLabel").text(post.title);
                 $("#modalPostImage").attr("src", post.imageUrl);
                 $("#modalPostAuthor").text(`Por ${post.author}`);
-                $("#modalPostDate").text(`el ${post.date}`);
+                $("#modalPostDate").text(`Publicado: ${post.date}`);
                 $("#modalPostContent").html(`<p>${post.content}</p>`); // Usamos .html() para permitir HTML si el contenido lo tuviera
             } else {
                 $("#blogPostModalLabel").text("Error");
@@ -170,3 +216,5 @@ $("#blogPostModal").on("show.bs.modal", function (event) {
         },
     });
 });
+
+

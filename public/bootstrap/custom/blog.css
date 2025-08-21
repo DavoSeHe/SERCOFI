@@ -19,6 +19,7 @@
   object-fit: cover;
   /* Recorta la imagen para que quepa */
   width: 100%;
+  padding-top: .9rem;
 }
 
 .blog-card-body {
@@ -52,3 +53,156 @@
   color: #888;
   margin-bottom: 10px;
 }
+
+.col-card {
+  background-color: white;
+  border-radius: 11px;
+  margin: 0.1rem;
+}
+
+
+@media (min-width: 992px) {
+  .row-cols-lg-3>* {
+    flex: 0 0 auto !important;
+    width: 33%;
+  }
+}
+
+
+
+
+:root{
+      --rosa-mex: #E4007C; /* ajusta aquí si prefieres otro tono */
+      --negro: #0f0f10;
+      --blanco: #ffffff;
+    }
+
+    /* Botón disparador */
+    .btn-rosa{
+      background: var(--rosa-mex);
+      color: var(--blanco);
+      border: none;
+      box-shadow: 0 6px 16px rgba(228,0,124,.3);
+    }
+    .btn-rosa:hover{ background: #c8006b; color: var(--blanco); }
+
+    /* Backdrop ligeramente teñido */
+    .modal-backdrop.show{
+      background-color: rgba(15,15,16,.7);
+    }
+
+    /* Contenedor del modal */
+    .modal-content{
+      background: linear-gradient(180deg, #111 0%, #0c0c0d 100%);
+      color: var(--blanco);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow:
+        0 10px 30px rgba(0,0,0,.45),
+        0 0 0 1px rgba(255,255,255,.04) inset;
+    }
+
+    /* Borde superior acentuado */
+    .modal-accent{
+      height: 4px !important;
+    }
+
+    /* Header */
+    .modal-header{
+      background: transparent;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .modal-title{
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+    .btn-close{
+      filter: invert(1) grayscale(100%);
+      opacity: .8;
+    }
+    .btn-close:hover{ opacity: 1; }
+
+    /* Hero / portada */
+    .hero-wrap{
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #1a1a1a;
+      box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    }
+    .hero-img{
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      opacity: .95;
+    }
+    .hero-badge{
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(0,0,0,.55);
+      color: var(--blanco);
+      border: 1px solid rgba(255,255,255,.15);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: .8rem;
+      backdrop-filter: blur(4px);
+    }
+
+    /* Cuerpo del contenido */
+    .modal-body{
+      color: #e9e9ea;
+    }
+    .content{
+      max-height: 45vh;
+      overflow: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--rosa-mex) #1a1a1a;
+    }
+    .content p{
+      color: #d9d9da;
+      line-height: 1.6;
+    }
+    .content h6{
+      color: #ffffff;
+      margin-top: 1rem;
+      border-left: 3px solid var(--rosa-mex);
+      padding-left: .6rem;
+    }
+
+    /* Footer / acciones */
+    .modal-footer{
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+    .btn-outline-rosa{
+      border: 1px solid var(--rosa-mex);
+      color: var(--rosa-mex);
+      background: transparent;
+    }
+    .btn-outline-rosa:hover{
+      background: var(--rosa-mex);
+      color: var(--blanco);
+    }
+
+    /* Micro animaciones (respeta prefers-reduced-motion) */
+    @media (prefers-reduced-motion: no-preference){
+      .modal.show .modal-dialog{
+        transform: translateY(6px);
+        transition: transform .25s ease, opacity .25s ease;
+      }
+    }
+
+    /* Modo claro opcional (si tu sitio es claro) */
+    .light .modal-content{
+      background: #ffffff;
+      color: #111;
+      border: 1px solid rgba(0,0,0,.08);
+    }
+    .light .modal-header,
+    .light .modal-footer{
+      border-color: rgba(0,0,0,.06);
+    }
+    .light .btn-close{ filter: none; }
+    .light .content p{ color: #333; }
