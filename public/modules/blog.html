@@ -1,31 +1,140 @@
-<script>
-  console.log("Se abrio la pagina");
-  // Cargar las entradas del blog al cargar blog.html
-</script>
 <div class="container py-5">
-  <h1 class="text-center mb-5 display-4 fw-bold text-primary">Nuestro Blog</h1>
+  <h1 class="text-center mb-5 display-4 fw-bold text-mexican-pink">
+    Todo lo necesario para informarte
+  </h1>
 
-  <div id="blogPostsContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
+  <div
+    id="blogPostsContainer"
+    class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
+  ></div>
 
-  <div class="modal fade" id="blogPostModal" tabindex="-1" aria-labelledby="blogPostModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
+  <!-- <div
+      class="modal modal-lg fade"
+      id="blogPostModal1"
+      tabindex="-1"
+      aria-labelledby="blogPostModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-accent"></div>
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title" id="blogPostModalLabel"></h5>
+              <div class="small text-secondary mt-1" id="modalPostDate"></div>
+            </div>
+            <button
+              type="button"
+              class="btn-close text-white"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              id="modalPostImage"
+              src=""
+              class="img-fluid mb-3"
+              alt="Imagen del Post"
+            />
+            <p class="text-muted small mb-2">
+              <span id="modalPostAuthor"></span>
+            </p>
+            <div id="modalPostContent"></div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="blogPostModal"
+    tabindex="-1"
+    aria-hidden="true"
+    aria-labelledby="blogPostModalLabel"
+  >
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content p-2">
+        <div class="modal-accent bg-mexican-pink"></div>
+
         <div class="modal-header">
-          <h5 class="modal-title" id="blogPostModalLabel"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div>
+            <div class="d-flex align-items-center gap-2 mb-1"></div>
+            <h5 class="modal-title" id="blogPostModalLabel"></h5>
+            <div class="small text-secondary mt-1" id="modalPostDate"></div>
+          </div>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Cerrar"
+          ></button>
         </div>
+
         <div class="modal-body">
-          <img id="modalPostImage" src="" class="img-fluid mb-3" alt="Imagen del Post" />
-          <p class="text-muted small mb-2">
-            <span id="modalPostAuthor"></span> |
-            <span id="modalPostDate"></span>
-          </p>
-          <div id="modalPostContent"></div>
+          <div class="hero-wrap mb-3">
+            <img
+              id="modalPostImage"
+              class="hero-img"
+              src=""
+              alt="Portada de la nota"
+            />
+            <span class="hero-badge">#E4007C · Rosa mexicano</span>
+          </div>
+
+          <div class="content" id="modalPostContent">
+            <!-- <h6>Resumen</h6>
+            <p>
+              El rosa mexicano aporta energía y carácter a las interfaces. En
+              esta nota verás cómo usarlo como color de acento sin sacrificar
+              legibilidad, balanceando contrastes con negro y blanco.
+            </p>
+
+            <h6>Puntos clave</h6>
+            <ul>
+              <li>
+                Úsalo en botones primarios, enlaces importantes y estados
+                activos.
+              </li>
+              <li>
+                Evita grandes bloques en rosa sólido para no fatigar la vista.
+              </li>
+              <li>
+                Combina con negro para profundidad y con blanco para respiración
+                visual.
+              </li>
+            </ul>
+
+            <h6>Extracto</h6>
+            <p>
+              Al definir tu sistema de diseño, crea variables para los colores
+              base y de acento. Así mantienes consistencia y puedes ajustar el
+              tono sin romper el estilo global.
+            </p> -->
+          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-            Cerrar
-          </button>
+
+        <div class="modal-footer justify-content-between">
+          <div class="d-flex align-items-center gap-2">
+            <a
+              class="btn btn-rosa"
+              href="#"
+              role="button"
+              id="modalPostLink"
+              target="_blank"
+              >Leer artículo completo</a
+            >
+          </div>
         </div>
       </div>
     </div>
