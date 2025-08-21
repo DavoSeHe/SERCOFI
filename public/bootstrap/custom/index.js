@@ -85,7 +85,13 @@ const blogApiUrl = `${blogApiBaseUrl}/api/blog-posts`;
 
 // Función para cargar las entradas del blog
 function loadBlogPosts() {
-    $.ajax({
+
+  showLoader();
+
+    setTimeout(()=>{
+
+
+ $.ajax({
         url: blogApiUrl,
         method: "GET",
         dataType: "json",
@@ -132,9 +138,13 @@ function loadBlogPosts() {
             );
         },
     });
+    console.log("termino")
+    hideLoader();
+
+    },1000);
+   
 }
 
-var publica;
 function fn_AbreModal(btn) {
     
 
@@ -144,7 +154,6 @@ function fn_AbreModal(btn) {
         dataType: "json",
         success: function (data) {
 
-            publica = data;
             const post = data.find(item => item.id == btn);
 
             if (post) {
@@ -179,42 +188,37 @@ function fn_AbreModal(btn) {
     $("#blogPostModal").modal('show');
 }
 
-// Manejar el evento de mostrar el modal (para cargar contenido completo)
-$("#blogPostModal").on("show.bs.modal", function (event) {
-    console.log("o nel")
-    const button = $(event.relatedTarget); // Botón que activó el modal
-    const postId = button.data("post-id"); // Extraer el ID del post
-
-    $.ajax({
-        url: `${blogApiUrl}/${postId}`,
-        method: "GET",
-        dataType: "json",
-        success: function (post) {
-            if (post) {
-                $("#blogPostModalLabel").text(post.title);
-                $("#modalPostImage").attr("src", post.imageUrl);
-                $("#modalPostAuthor").text(`Por ${post.author}`);
-                $("#modalPostDate").text(`Publicado: ${post.date}`);
-                $("#modalPostContent").html(`<p>${post.content}</p>`); // Usamos .html() para permitir HTML si el contenido lo tuviera
-            } else {
-                $("#blogPostModalLabel").text("Error");
-                $("#modalPostContent").html(
-                    "<p>No se pudo cargar el contenido de la entrada.</p>"
-                );
-            }
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            console.error(
-                "Error al cargar la entrada específica:",
-                textStatus,
-                errorThrown
-            );
-            $("#blogPostModalLabel").text("Error de Carga");
-            $("#modalPostContent").html(
-                "<p>Hubo un problema al cargar esta entrada del blog. Por favor, inténtalo de nuevo.</p>"
-            );
-        },
-    });
-});
 
 
+
+// LOADING
+
+
+  // Útil cuando haces fetch/axios y quieres mostrar el loader manualmente
+  function showLoader(){
+    let loader = document.getElementById('loader');
+    if (!loader){
+      // Si lo quitaste del DOM, vuelve a crearlo rápidamente:
+      loader = document.createElement('div');
+      loader.id = 'loader';
+      loader.innerHTML = `
+        <div class="loader-wrap" aria-label="Cargando contenido">
+          <div class="ring" aria-hidden="true"></div>
+          <div class="dot" aria-hidden="true"></div>
+          <p class="loader-text"><span class="shine">Cargando</span><span class="ellipsis"></span></p>
+        </div>`;
+      document.body.appendChild(loader);
+    }
+    loader.classList.remove('hide');
+    document.body.classList.add('is-loading');
+  }
+function hideLoader(){
+    const loader = document.getElementById('loader');
+    if (!loader) return;
+    loader.classList.add('hide');
+    document.body.classList.remove('is-loading');
+    // Remueve del DOM al terminar la transición
+    loader.addEventListener('transitionend', () => loader.remove(), { once:true });
+  }
+
+  hideLoader();
