@@ -111,7 +111,7 @@ function loadBlogPosts() {
                                                 <p class="blog-meta">Por ${post.author} el ${post.date}</p>
                                                 <p class="card-text blog-card-text">${post.content}</p>
                                             </div>
-                                            <button class="btn bg-mexican-pink mt-3 read-more-btn" data-post-id="${post.id}" onclick="fn_AbreModal(${post.id})">
+                                            <button class="btn bg-mexican-pink text-white mt-3 fade-in" data-post-id="${post.id}" onclick="fn_AbreModal(${post.id})">
                                                 Leer más
                                             </button>
                                         </div>
